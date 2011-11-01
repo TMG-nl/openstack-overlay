@@ -1,0 +1,4 @@
+This overlay is here to run Nova / Openstack on our Gentoo Image
+
+You'll notice there are some ebuild in there which are revision bumped versions of whats already present in the main gentoo portage tree. Typically these ebuild have been modified to exclude building for python 3.*, since they require setuptools, which is not available for python 3.*.
+
