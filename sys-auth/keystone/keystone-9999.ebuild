@@ -8,14 +8,13 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils
+inherit git-2 distutils
 
 DESCRIPTIOn="Keystone is a cloud identity service written in Python, which
 provides authentication, authorization, and an OpenStack service catalog. It
 implements OpenStac's Identity API."
 HOMEPAGE="https://launchpad.net/keystone"
-SRC_URI="https://github.com/openstack/keystone/tarball/${PV} ->
-keystone-${PV}.tar.gz"
+EGIT_REPO_URI="https://github.com/openstack/keystone.git"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -30,9 +29,3 @@ RDEPEND="${DEPEND}
 		 dev-python/python-novaclient
 		 dev-python/python-ldap
 		 dev-python/passlib"
-
-src_unpack() {
-	unpack ${A}
-	mv *-${PN}-* "${S}"
-}
-
