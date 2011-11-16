@@ -18,7 +18,7 @@ EGIT_REPO_URI="https://github.com/openstack/nova.git"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="controller"
 
 DEPEND="dev-python/setuptools
         dev-python/lockfile
@@ -46,7 +46,8 @@ RDEPEND="${DEPEND}
 		 dev-python/nova-adminclient
 		 dev-python/boto
 		 dev-python/prettytable
-		 dev-python/mysql-python"
+		 dev-python/mysql-python
+		 controller? ( net-misc/rabbitmq-server )"
 
 src_install() {
 	distutils_src_install
