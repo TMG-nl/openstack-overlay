@@ -21,6 +21,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-python/setuptools"
+DEPEND="dev-python/setuptools 
+	    app-arch/unzip"
 RDEPEND="${DEPEND}"
 
