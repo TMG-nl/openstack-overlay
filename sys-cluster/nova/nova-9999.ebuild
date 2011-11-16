@@ -44,7 +44,9 @@ RDEPEND="${DEPEND}
 		 app-admin/glance
 		 dev-python/python-novaclient
 		 dev-python/nova-adminclient
-		 dev-python/boto"
+		 dev-python/boto
+		 dev-python/prettytable
+		 dev-python/mysql-python"
 
 src_install() {
 	distutils_src_install
