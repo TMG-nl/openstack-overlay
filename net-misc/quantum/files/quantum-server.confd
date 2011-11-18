@@ -1,0 +1,2 @@
+PID_PATH=/var/run/quantum
+LOG_PATH=/var/log/quantum

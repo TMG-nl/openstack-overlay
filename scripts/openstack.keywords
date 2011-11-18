@@ -17,6 +17,8 @@ dev-python/nova-adminclient ~amd64
 dev-python/pastedeploy ~amd64
 dev-python/coverage ~amd64
 dev-python/nose ~amd64
-app-admin/glance ~amd64
+dev-python/pip ~amd64
 dev-python/prettytable ~amd64
+app-admin/glance ~amd64
+net-misc/quantum ~amd64
 sys-cluster/nova ~amd64
