@@ -1,13 +1,13 @@
 This overlay is here to run Nova / Openstack on our Gentoo Image
 
-You'll notice there are some ebuild in there which are revision bumped versions of whats already present in the main gentoo portage tree. 
-Typically these ebuild have been modified to exclude building for python 3.*, since they require setuptools, which is not available for python 3.*.
+You'll notice there are some ebuilds in here which are revision bumped versions of what's already present in the main gentoo portage tree. 
+Typically these ebuild have been modified to exclude building for python 3.*, since they depend on setuptools, which is not available for python 3.*.
 
 Using this overlay through layman:
 ----------------------------------
 - "emerge layman"
 - Edit the layman configuration "vi /etc/layman/layman.cfg" and add 
-  https://github.com/hyves-org/openstack-overlay/blob/master/openstack-overlay.xml 
+  https://raw.github.com/hyves-org/openstack-overlay/master/openstack-overlay.xml
   to the 'overlay:' section.
 - Now run "layman -a openstack" to add the overlay
 
