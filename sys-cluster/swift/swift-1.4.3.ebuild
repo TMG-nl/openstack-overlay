@@ -22,5 +22,9 @@ IUSE=""
 
 DEPEND="dev-python/setuptools"
 RDEPEND="${DEPEND}
-		 dev-python/netifaces"
+		 dev-python/netifaces
+		 dev-python/eventlet
+		 dev-python/webob
+		 dev-python/pastedeploy
+		 dev-python/pyxattr"
 
