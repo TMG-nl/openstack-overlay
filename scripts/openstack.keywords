@@ -24,3 +24,5 @@ app-admin/glance ~amd64
 net-misc/quantum ~amd64
 sys-cluster/nova ~amd64
 sys-cluster/swift ~amd64
+sys-apps/seabios ~amd64
+app-emulation/qemu-kvm ~amd64
