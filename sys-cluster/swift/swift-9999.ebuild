@@ -8,12 +8,12 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils
+inherit git-2 distutils
 
 DESCRIPTION="Swift is a highly available, distributed, eventually consistent
 object/blob store"
 HOMEPAGE="https://launchpad.net/swift"
-SRC_URI="http://launchpad.net/${PN}/essex/${PV}/+download/${P}.tar.gz"
+EGIT_REPO_URI="https://github.com/openstack/swift.git"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -22,11 +22,11 @@ IUSE="storage-server proxy-server"
 
 DEPEND="dev-python/setuptools"
 RDEPEND="${DEPEND}
-		 dev-python/netifaces
-		 dev-python/eventlet
-		 dev-python/webob
-		 dev-python/pastedeploy
-		 dev-python/pyxattr"
+         dev-python/netifaces
+         dev-python/eventlet
+         dev-python/webob
+         dev-python/pastedeploy
+         dev-python/pyxattr"
 
 # Can only use this when python.eclass is using EAPI4
 #REQUIRED_USE="|| ( storage-server proxy-server )"
