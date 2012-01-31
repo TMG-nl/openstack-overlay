@@ -1,0 +1,5 @@
+SERVERS="account container object"
+
+ACCOUNTSERVICE="server replicator auditor"
+CONTAINERSERVICE="server replicator updater auditor"
+OBJECTSERVICE="server replicator updater auditor"

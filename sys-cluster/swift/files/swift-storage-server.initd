@@ -1,0 +1,60 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+#
+# Author: Cor Cornelisse <corcornelisse@gmail.com>
+
+depend() {
+	need net
+}
+
+BASENAME=$(echo $SVCNAME | cut -d '-' -f 1)
+
+checkconfig() {
+	if [ ! -r /etc/${BASENAME}/${BASENAME}.conf ]; then
+		eerror "Missing required config file: /etc/${BASENAME}/${BASENAME}.conf"
+		return 1
+	fi
+	for server in ${SERVERS}; do
+		if [ ! -r /etc/${BASENAME}/${server}-server.conf ]; then
+			eerror "Missing required config file: /etc/${BASENAME}/${SERVER}-server.conf"
+			return 1
+		fi
+	done
+	return 0
+}
+
+start() {
+	checkconfig || return $?
+
+	einfo "Starting all ${BASENAME} services:"
+
+	for server in ${SERVERS}; do
+		for service in $(eval "echo \$${server^^}SERVICE"); do
+			ebegin "Starting $server-$service"
+			start-stop-daemon --start --pidfile \
+					  "/var/run/${BASENAME}/$server-$service.pid" \
+					  --exec /usr/bin/${BASENAME}-init \
+					  -- $server-$service start
+			eend $? "Failed to start $server-$service"
+		done
+	done
+}
+
+stop() {
+	checkconfig || return $?
+
+	einfo "Stopping all ${BASENAME} services:"
+
+	for server in ${SERVERS}; do
+		for service in $(eval "echo \$${server^^}SERVICE"); do
+			ebegin "Stopping $server-$service"
+			start-stop-daemon --stop --pidfile \
+					  "/var/run/${BASENAME}/$server-$service.pid" \
+					  --exec /usr/bin/${BASENAME}-init \
+					  -- $server-$service stop
+			eend $? "Failed to stop $server-$service"
+		done
+	done
+}

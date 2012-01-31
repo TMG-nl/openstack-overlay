@@ -1,0 +1,44 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+#
+# Author: Cor Cornelisse <corcornelisse@gmail.com>
+
+depend() {
+	need net
+}
+
+BASENAME=$(echo $SVCNAME | cut -d '-' -f 1)
+SERVERNAME=$(echo $SVCNAME | cut -c 7-)
+
+checkconfig() {
+	if [ ! -r /etc/${BASENAME}/${SERVICENAME} ]; then
+		eerror "No config file found: /etc/${BASENAME}/${SERVICENAME}"
+		return 1
+	fi
+	return 0
+}
+
+
+start() {
+	checkconfig || return $?
+	
+	ebegin "Starting ${SVCNAME}"
+	
+	start-stop-daemon --start --pidfile "/var/run/${BASENAME}/${SERVERNAME}.pid" \
+					  --exec /usr/bin/${BASENAME}-init -- ${SERVERNAME} start
+	
+	eend $? "Failed to start ${SVCNAME}"
+}
+
+stop() {
+	checkconfig || return $?
+	
+	ebegin "Stopping ${SVCNAME}"
+	
+	start-stop-daemon --stop --pidfile "/var/run/${BASENAME}/${SERVERNAME}.pid" \
+					  --exec /usr/bin/${BASENAME}-init -- ${SERVERNAME} stop 
+	eend $? "Failed to stop ${SVCNAME}"
+}
+
