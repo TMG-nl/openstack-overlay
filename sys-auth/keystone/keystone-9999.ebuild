@@ -24,7 +24,8 @@ IUSE=""
 DEPEND="dev-python/setuptools
 		dev-python/pep8
 		dev-python/lxml
-		dev-python/python-daemon"
+		dev-python/python-daemon
+		!dev-python/keystoneclient"
 RDEPEND="${DEPEND}
 		 dev-python/python-novaclient
 		 dev-python/python-ldap
