@@ -1,12 +1,16 @@
 --- setup.py.orig	2012-02-02 12:26:50.000000000 +0100
-+++ setup.py	2012-02-02 12:30:53.000000000 +0100
-@@ -67,14 +67,12 @@
++++ setup.py	2012-02-02 13:05:46.000000000 +0100
+@@ -66,15 +66,13 @@
+ ProjectScripts = [
  ]
  
- config_path = 'etc/quantum/'
+-config_path = 'etc/quantum/'
 -init_path = 'etc/init.d'
- ovs_plugin_config_path = 'etc/quantum/plugins/openvswitch'
- cisco_plugin_config_path = 'etc/quantum/plugins/cisco'
+-ovs_plugin_config_path = 'etc/quantum/plugins/openvswitch'
+-cisco_plugin_config_path = 'etc/quantum/plugins/cisco'
++config_path = '/etc/quantum/'
++ovs_plugin_config_path = '/etc/quantum/plugins/openvswitch'
++cisco_plugin_config_path = '/etc/quantum/plugins/cisco'
  
  DataFiles = [
      (config_path,
