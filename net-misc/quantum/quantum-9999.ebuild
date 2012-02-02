@@ -39,14 +39,7 @@ src_prepare() {
 }
 
 src_install() {
-	for sub in client common server quantum; do
-		cd ${S}/${sub}
-		distutils_src_install
-	done
-	for plugin in cisco-plugin openvswitch-plugin sample-plugin; do
-		cd ${S}/plugins/${plugin}
-		distutils_src_install
-	done
+	distutils_src_install
 
 	newconfd "${FILESDIR}/quantum-server.confd" quantum-server
 	newinitd "${FILESDIR}/quantum-server.initd" quantum-server
