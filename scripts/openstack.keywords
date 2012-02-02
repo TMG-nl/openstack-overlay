@@ -31,3 +31,4 @@ sys-apps/seabios ~amd64
 sys-auth/keystone ~amd64
 sys-auth/swift-keystone2 ~amd64
 app-emulation/qemu-kvm ~amd64
+www-apps/horizon ~amd64
