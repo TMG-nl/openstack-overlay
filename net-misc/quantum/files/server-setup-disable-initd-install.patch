@@ -1,22 +1,17 @@
---- server/setup.py.orig	2011-11-18 12:49:47.000000000 +0100
-+++ server/setup.py	2011-11-18 12:50:12.000000000 +0100
-@@ -36,18 +36,15 @@
- # If we're installing server-wide, use an aboslute path for config
- # if not, use a relative path
- config_path = '/etc/quantum/'
--init_path = '/etc/init.d'
+--- setup.py.orig	2012-02-02 12:26:50.000000000 +0100
++++ setup.py	2012-02-02 12:30:53.000000000 +0100
+@@ -67,14 +67,12 @@
+ ]
  
- relative_locations = ['--user', '--virtualenv', '--venv']
- if [x for x in relative_locations if x in sys.argv]:
-     config_path = 'etc/quantum/'
--    init_path = 'etc/init.d'
+ config_path = 'etc/quantum/'
+-init_path = 'etc/init.d'
+ ovs_plugin_config_path = 'etc/quantum/plugins/openvswitch'
+ cisco_plugin_config_path = 'etc/quantum/plugins/cisco'
  
  DataFiles = [
      (config_path,
-     ['etc/quantum.conf', 'etc/quantum.conf.sample',
--     'etc/quantum.conf.test', 'etc/plugins.ini']),
--    (init_path, ['etc/init.d/quantum-server'])
-+     'etc/quantum.conf.test', 'etc/plugins.ini'])
- ]
- 
- setup(
+         ['etc/quantum.conf', 'etc/quantum.conf.test', 'etc/plugins.ini']),
+-    (init_path, ['etc/init.d/quantum-server']),
+     (ovs_plugin_config_path,
+         ['etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini']),
+     (cisco_plugin_config_path,
