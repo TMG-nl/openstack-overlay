@@ -25,4 +25,6 @@ net-misc/quantum ~amd64
 sys-cluster/nova ~amd64
 sys-cluster/swift ~amd64
 sys-apps/seabios ~amd64
+sys-auth/keystone ~amd64
+sys-auth/swift-keystone2 ~amd64
 app-emulation/qemu-kvm ~amd64
