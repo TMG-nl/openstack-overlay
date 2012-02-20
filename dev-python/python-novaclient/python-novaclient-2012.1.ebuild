@@ -21,5 +21,8 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-python/setuptools"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+		 dev-python/argparse
+		 dev-python/httplib2
+		 dev-python/prettytable"
 
