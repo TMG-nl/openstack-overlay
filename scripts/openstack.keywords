@@ -31,5 +31,6 @@ sys-apps/seabios ~amd64
 sys-auth/keystone ~amd64
 sys-auth/swift-keystone2 ~amd64
 app-emulation/qemu-kvm ~amd64
-=www-apps/horizon-2012.1 ~amd64 
-app-misc/scrub ~amd64 
+=www-apps/horizon-2012.1_rc1 ~amd64 
+app-misc/scrub ~amd64
+dev-python/iso8601 ~amd64
