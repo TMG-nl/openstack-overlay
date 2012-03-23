@@ -47,6 +47,7 @@ RDEPEND="${DEPEND}
          dev-python/boto
          dev-python/prettytable
          dev-python/mysql-python
+		 dev-python/iso8601
          controller? ( net-misc/rabbitmq-server )"
 
 S=${WORKDIR}/${P/_*/}
