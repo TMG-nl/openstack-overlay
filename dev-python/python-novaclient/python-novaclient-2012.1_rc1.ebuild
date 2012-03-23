@@ -28,6 +28,3 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}/${P/_*/}
 
-#src_install() {
-#	distutils_src_install
-#}
