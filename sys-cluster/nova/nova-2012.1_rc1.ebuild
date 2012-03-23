@@ -52,7 +52,6 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/${P/_*/}
 
 src_install() {
-	elog "${S}"
 	distutils_src_install
 	newconfd "${FILESDIR}/nova.confd" nova
 	newinitd "${FILESDIR}/nova.initd" nova
