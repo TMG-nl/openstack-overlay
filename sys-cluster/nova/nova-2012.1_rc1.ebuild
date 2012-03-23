@@ -57,7 +57,7 @@ src_install() {
 	newconfd "${FILESDIR}/nova.confd" nova
 	newinitd "${FILESDIR}/nova.initd" nova
 
-	for function in api compute network objectstore scheduler volume xvpvncproxy; do
+	for function in api compute consoleauth network objectstore scheduler volume xvpvncproxy; do
 		dosym /etc/init.d/nova /etc/init.d/nova-${function}
 	done
 
