@@ -26,8 +26,7 @@ S=${WORKDIR}/${P/_*/}
 DEPEND="dev-python/setuptools
 		dev-python/pep8
 		dev-python/lxml
-		dev-python/python-daemon
-		!dev-python/keystoneclient"
+		dev-python/python-daemon"
 RDEPEND="${DEPEND}
 		 dev-python/python-novaclient
 		 dev-python/python-ldap
