@@ -13,7 +13,7 @@ DESCRIPTION="Provides services for discovering, registering, and retrieving
 virtual machine images. Glance has a RESTful API that allows querying of VM
 image metadata as well as retrieval of the actual image."
 HOMEPAGE="https://launchpad.net/glance"
-SRC_URI="http://launchpad.net/glance/essex/essex-rc1/+download/${P/_*/}~rc1.tar.gz"
+SRC_URI="http://launchpad.net/glance/essex/essex-rc2/+download/${P/_*/}~rc2.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
