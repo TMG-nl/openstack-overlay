@@ -23,7 +23,7 @@ dev-python/netifaces ~amd64
 =dev-python/python-cloudfiles-1.7.10 ~amd64 
 =dev-python/python-keystoneclient-2012.1_rc1 ~amd64 
 dev-python/django-nose ~amd64
-=app-admin/glance-2012.1_rc1-r1 ~amd64 
+=app-admin/glance-2012.1_rc2 ~amd64 
 net-misc/quantum ~amd64
 =sys-cluster/nova-2012.1_rc1 ~amd64 
 =sys-cluster/swift-1.4.8 ~amd64 
