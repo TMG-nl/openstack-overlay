@@ -25,7 +25,7 @@ dev-python/netifaces ~amd64
 dev-python/django-nose ~amd64
 =app-admin/glance-2012.1_rc2 ~amd64 
 net-misc/quantum ~amd64
-=sys-cluster/nova-2012.1_rc1 ~amd64 
+=sys-cluster/nova-2012.1_rc1-r1 ~amd64 
 =sys-cluster/swift-1.4.8 ~amd64 
 sys-apps/seabios ~amd64
 =sys-auth/keystone-2012.1_rc1 ~amd64
