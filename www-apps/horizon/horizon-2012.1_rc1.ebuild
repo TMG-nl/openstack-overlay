@@ -43,7 +43,8 @@ DEPEND="=dev-python/django-1.3.1
 		dev-python/python-novaclient
 		dev-python/python-cloudfiles
 		app-admin/glance
-		dev-python/setuptools"
+		dev-python/setuptools
+		www-apps/noVNC"
 
 RDEPEND="${DEPEND}"
 
