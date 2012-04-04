@@ -55,7 +55,7 @@ src_install() {
 	dodoc ${FILESDIR}"/horizon_vhost.conf"
 	dodir /etc/horizon
 	insinto /etc/horizon
-	doins ${S}/openstack_dashboard/local/local_settings.py
+	doins openstack_dashboard/local/local_settings.py.example
 	# Little dirty this way, but get's the job done bro
 	dosym /etc/horizon/local_settings.py /usr/lib64/python2.7/site-packages/openstack_dashboard/local/local_settings.py
 }
