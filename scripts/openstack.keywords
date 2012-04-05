@@ -2,7 +2,7 @@ dev-python/netaddr ~amd64
 dev-python/pep8 ~amd64
 dev-python/python-gflags ~amd64
 dev-python/wsgiref ~amd64
-=dev-python/python-novaclient-2012.1_rc3 ~amd64 
+=dev-python/python-novaclient-2012.1_rc4 ~amd64 
 dev-python/kombu ~amd64
 dev-python/routes ~amd64
 dev-python/tempita ~amd64
@@ -25,7 +25,7 @@ dev-python/netifaces ~amd64
 dev-python/django-nose ~amd64
 =app-admin/glance-2012.1_rc3 ~amd64 
 net-misc/quantum ~amd64
-=sys-cluster/nova-2012.1_rc3 ~amd64 
+=sys-cluster/nova-2012.1_rc4 ~amd64 
 =sys-cluster/swift-1.4.8 ~amd64 
 sys-apps/seabios ~amd64
 =sys-auth/keystone-2012.1_rc2 ~amd64
