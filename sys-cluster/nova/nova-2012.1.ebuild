@@ -8,14 +8,12 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit git-2 distutils
+inherit distutils
 
 DESCRIPTION="Nova is a cloud computing fabric controller (the main part of an
 IaaS system). It is written in Python."
 HOMEPAGE="https://launchpad.net/nova"
-EGIT_REPO_URI="https://github.com/openstack/nova.git"
-# Essex-4
-EGIT_COMMIT="e650458559"
+SRC_URI="http://launchpad.net/${PN}/essex/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -24,40 +22,40 @@ IUSE="controller"
 
 DEPEND="dev-python/setuptools
         dev-python/lockfile
-		dev-python/netaddr
-		dev-python/eventlet
-		dev-python/python-gflags
-		dev-python/nosexcover
-		dev-python/sqlalchemy-migrate
-		dev-python/pylint
-		dev-python/mox
-		dev-python/pep8
-		dev-python/cheetah
-		dev-python/carrot
-		dev-python/lxml
-		dev-python/python-daemon
-		dev-python/wsgiref
-		dev-python/sphinx
-		dev-python/suds
-		dev-python/paramiko
-		dev-python/feedparser"
+        dev-python/netaddr
+        dev-python/eventlet
+        dev-python/python-gflags
+        dev-python/nosexcover
+        dev-python/sqlalchemy-migrate
+        dev-python/pylint
+        dev-python/mox
+        dev-python/pep8
+        dev-python/cheetah
+        dev-python/carrot
+        dev-python/lxml
+        dev-python/python-daemon
+        dev-python/wsgiref
+        dev-python/sphinx
+        dev-python/suds
+        dev-python/paramiko
+        dev-python/feedparser"
 RDEPEND="${DEPEND}
-		 dev-python/m2crypto
-		 app-admin/glance
-		 dev-python/python-novaclient
-		 dev-python/nova-adminclient
-		 dev-python/boto
-		 dev-python/prettytable
-		 dev-python/mysql-python
+         dev-python/m2crypto
+         app-admin/glance
+         dev-python/python-novaclient
+         dev-python/nova-adminclient
+         dev-python/boto
+         dev-python/prettytable
+         dev-python/mysql-python
 		 dev-python/iso8601
-		 controller? ( net-misc/rabbitmq-server )"
+         controller? ( net-misc/rabbitmq-server )"
 
 src_install() {
 	distutils_src_install
 	newconfd "${FILESDIR}/nova.confd" nova
 	newinitd "${FILESDIR}/nova.initd" nova
 
-	for function in api compute network objectstore scheduler volume xvpvncproxy; do
+	for function in api cert compute consoleauth network objectstore scheduler volume xvpvncproxy; do
 		dosym /etc/init.d/nova /etc/init.d/nova-${function}
 	done
 

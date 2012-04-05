@@ -6,14 +6,14 @@ EAPI=3
 
 PYTHON_DEPEND="2"
 
-inherit git-2 distutils eutils
+inherit distutils eutils
 
 DESCRIPTION="The OpenStack Dashboard (Horizon) provides a baseline user
 interface for managing OpenStack services. It is a reference implementation
 built using the django-openstack project which contains all of the core
 functionality needed to develop a site-specific implementation."
 HOMEPAGE="http://wiki.openstack.org/OpenStackDashboard"
-EGIT_REPO_URI="https://github.com/openstack/horizon"
+SRC_URI="http://launchpad.net/${PN}/essex/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -43,18 +43,28 @@ DEPEND="=dev-python/django-1.3.1
 		dev-python/python-novaclient
 		dev-python/python-cloudfiles
 		app-admin/glance
-		dev-python/setuptools"
-RDEPEND="${DEPEND}"
+		dev-python/setuptools
+		www-apps/noVNC"
 
-DISTUTILS_SETUP_FILES=("horizon/setup.py" "openstack-dashboard/setup.py")
+RDEPEND="${DEPEND}"
 
 src_install() {
 	distutils_src_install
-
-	#newconfd "${FILESDIR}/openstack-dashboard.confd" openstack-dashboard
-	#newinitd "${FILESDIR}/openstack-dashboard.initd" openstack-dashboard
-
-	#diropts -m 0750
-	#dodir /var/run/quantum /var/log/quantum
+	dodoc ${FILESDIR}"/horizon_vhost.conf"
+	dodir /etc/horizon
+	insinto /etc/horizon
+	doins openstack_dashboard/local/local_settings.py.example
+	# Little dirty this way, but get's the job done bro
+	dosym /etc/horizon/local_settings.py /usr/lib64/python2.7/site-packages/openstack_dashboard/local/local_settings.py
 }
 
+pkg_postinst() {
+	elog
+	elog "A vhost configuration example for apache2 with mod_wsgi can be found"
+	elog "in /usr/share/doc/${PF}/horizon_vhost.conf"
+	elog "Adapt it to suite your needs, and install it in /etc/apache/vhosts.d/"
+	elog "Replace localhost by the real servername"
+	elog
+	elog "The dashboard can be configured through /etc/horizon/settings.py"
+	elog
+}
