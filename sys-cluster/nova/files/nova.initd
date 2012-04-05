@@ -29,7 +29,8 @@ start() {
 	. /etc/conf.d/$BASENAME
 	
 	ebegin "Starting ${SVCNAME}"
-	
+
+	export TMPDIR=${NOVA_TMP_PATH}
 	start-stop-daemon --start --quiet --make-pidfile --pidfile "${PID_PATH}/${SVCNAME}.pid" \
 					  --exec /usr/bin/${SVCNAME} --background -- --flagfile=${FLAG_FILE} \
 					  --logfile=${LOG_PATH}/${SVCNAME}.log
