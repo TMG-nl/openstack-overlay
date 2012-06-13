@@ -11,9 +11,10 @@ inherit git-2 distutils
 
 DESCRIPTION="Openstack Swift S3 library for Python"
 HOMEPAGE="https://github.com/fujita/swift3"
-EGIT_REPO_URI="https://github.com/fujita/swift3.git"
+#EGIT_REPO_URI="https://github.com/fujita/swift3.git"
+EGIT_REPO_URI="https://github.com/hyves-org/swift3.git"
 # 1.5.0
-EGIT_COMMIT="5c74ba0"
+EGIT_COMMIT="7f0b466"
 
 LICENSE=""
 SLOT="0"
