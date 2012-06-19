@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Swift is a highly available, distributed, eventually consistent
 object/blob store"
@@ -30,6 +30,10 @@ RDEPEND="${DEPEND}
 
 # Can only use this when python.eclass is using EAPI4
 #REQUIRED_USE="|| ( storage-server proxy-server )"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-client-authv2.patch"
+}
 
 src_install()
 {

@@ -1,0 +1,22 @@
+--- swift-1.5.0.org/swift/common/client.py	2012-06-19 12:40:25.000000000 +0200
++++ swift-1.5.0/swift/common/client.py	2012-06-19 12:39:51.000000000 +0200
+@@ -187,6 +187,10 @@
+ 
+ 
+ def _get_auth_v2_0(url, user, tenant_name, key, snet):
++    if not tenant_name and ':' in user:
++        tenant_name, user = user.split(':', 1)
++    if not tenant_name:
++        raise ClientException('No tenant specified')
+     body = {'auth': {'passwordCredentials':
+                       {'password': key, 'username': user},
+                      'tenantName': tenant_name}}
+@@ -238,8 +242,6 @@
+     if auth_version in ["1.0", "1"]:
+         return _get_auth_v1_0(url, user, key, snet)
+     elif auth_version in ["2.0", "2"]:
+-        if not tenant_name:
+-            raise ClientException('No tenant specified')
+         return _get_auth_v2_0(url, user, tenant_name, key, snet)
+ 
+ 
