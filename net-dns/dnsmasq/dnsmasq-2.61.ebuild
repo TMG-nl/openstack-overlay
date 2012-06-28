@@ -98,6 +98,9 @@ src_install() {
 		DESTDIR="${D}" \
 		install$(use nls && echo "-i18n")
 
+	exeinto /usr/sbin
+	doexe ${S}/contrib/wrt/dhcp_release
+
 	dodoc CHANGELOG CHANGELOG.archive FAQ
 	dodoc -r logo
 
