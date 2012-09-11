@@ -26,7 +26,7 @@ dev-python/django-nose ~amd64
 =app-admin/glance-2012.1 ~amd64 
 net-misc/quantum ~amd64
 =sys-cluster/nova-2012.1 ~amd64 
-=sys-cluster/swift-1.4.8 ~amd64 
+=sys-cluster/swift-1.5.0 ~amd64 
 sys-apps/seabios ~amd64
 =sys-auth/keystone-2012.1 ~amd64
 sys-auth/swift-keystone2 ~amd64
