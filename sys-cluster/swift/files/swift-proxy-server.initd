@@ -9,6 +9,8 @@ depend() {
 	need net
 }
 
+opts="reload"
+
 BASENAME=$(echo $SVCNAME | cut -d '-' -f 1)
 SERVERNAME=$(echo $SVCNAME | cut -c 7-)
 
@@ -23,22 +25,40 @@ checkconfig() {
 
 start() {
 	checkconfig || return $?
-	
+
 	ebegin "Starting ${SVCNAME}"
-	
 	start-stop-daemon --start --pidfile "/var/run/${BASENAME}/${SERVERNAME}.pid" \
 					  --exec /usr/bin/${BASENAME}-init -- ${SERVERNAME} start
-	
 	eend $? "Failed to start ${SVCNAME}"
 }
 
 stop() {
 	checkconfig || return $?
-	
+
 	ebegin "Stopping ${SVCNAME}"
-	
 	start-stop-daemon --stop --pidfile "/var/run/${BASENAME}/${SERVERNAME}.pid" \
 					  --exec /usr/bin/${BASENAME}-init -- ${SERVERNAME} stop 
 	eend $? "Failed to stop ${SVCNAME}"
+}
+
+reload() {
+	checkconfig || return $?
+
+	ebegin "Reloading ${SVCNAME}"
+	start-stop-daemon --exec /usr/bin/${BASENAME}-init -- ${SERVERNAME} reload
+	eend $? "Failed to reload ${SVCNAME}"
+}
+
+restart() {
+	checkconfig || return $?
+
+	ebegin "Restarting ${SVCNAME}"
+	start-stop-daemon --exec /usr/bin/${BASENAME}-init -- ${SERVERNAME} restart
+	eend $? "Failed to restart ${SVCNAME}"
+}
+
+status() {
+	start-stop-daemon --exec /usr/bin/${BASENAME}-init -- ${SERVERNAME} status
+	eend $? "Failed to get status for ${SVCNAME}"
 }
 
