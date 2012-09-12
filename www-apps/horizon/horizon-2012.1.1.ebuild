@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="=dev-python/django-1.3.1
+DEPEND=">=dev-python/django-1.3.1
 	    dev-python/python-dateutil
 		dev-python/sphinx
 		dev-python/cherrypy
