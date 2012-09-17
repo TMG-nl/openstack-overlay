@@ -31,7 +31,7 @@ sys-apps/seabios ~amd64
 =sys-auth/keystone-2012.1.2 ~amd64
 sys-auth/swift-keystone2 ~amd64
 app-emulation/qemu-kvm ~amd64
-=www-apps/horizon-2012.1.1 ~amd64 
+=www-apps/horizon-2012.1.1-r1 ~amd64 
 app-misc/scrub ~amd64
 dev-python/iso8601 ~amd64
 =www-apps/noVNC-9999 ~amd64
