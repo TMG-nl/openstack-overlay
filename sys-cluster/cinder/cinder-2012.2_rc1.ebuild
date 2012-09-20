@@ -41,6 +41,8 @@ RDEPEND="${DEPEND}
          <dev-python/python-glanceclient-2
 		 >=dev-python/iso8601-0.1.4"
 
+S=${WORKDIR}/${P/_*/}
+
 src_install() {
 	distutils_src_install
 	newconfd "${FILESDIR}/cinder.confd" cinder
