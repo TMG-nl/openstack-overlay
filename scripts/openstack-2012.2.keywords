@@ -1,4 +1,4 @@
-=dev-python/sqlalchemy-migrate ~amd64
+=dev-python/sqlalchemy-migrate-0.7.2 ~amd64
 =dev-python/python-glanceclient-0.5.1 ~amd64
 =dev-python/python-keystoneclient-0.1.3 ~amd64
 =sys-cluster/cinder-2012.2_rc1 ~amd64
@@ -15,7 +15,7 @@
 =dev-python/greenlet-0.3.1-r1 ~amd64
 =dev-python/eventlet-0.9.16 ~amd64
 =dev-python/kombu-1.4.1 ~amd64
-
+=dev-python/prettytable-0.6.1 ~amd64
 
 #dev-python/netaddr ~amd64
 #dev-python/pep8 ~amd64
