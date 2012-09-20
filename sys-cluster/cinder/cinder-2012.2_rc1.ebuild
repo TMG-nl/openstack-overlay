@@ -36,7 +36,7 @@ DEPEND="dev-python/setuptools
 		>=dev-python/pastedeploy-1.5.0
 		>=dev-python/greenlet-0.3.1
 		>=dev-python/webob-1.0.8
-		>=dev-python/babel-0.9.6"
+		>=dev-python/Babel-0.9.6"
 RDEPEND="${DEPEND}
          <dev-python/python-glanceclient-2
 		 >=dev-python/iso8601-0.1.4"
