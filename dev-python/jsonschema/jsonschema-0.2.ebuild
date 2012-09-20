@@ -18,7 +18,6 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-python/setuptools
-        =dev-python/jsonschema-0.2"
+DEPEND="dev-python/setuptools"
 RDEPEND="${DEPEND}"
 
