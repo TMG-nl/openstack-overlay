@@ -19,27 +19,30 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="dev-python/setuptools
-		>=dev-python/amqplib-0.6.1
-		>=dev-python/anyjson-0.2.4
+		=dev-python/amqplib-0.6.1
+		=dev-python/anyjson-0.2.4
         >=dev-python/lockfile-0.8
-        >=dev-python/kombu-1.0.4
-        dev-python/eventlet
+        =dev-python/kombu-1.0.4
+        >=dev-python/eventlet-0.9.17
         >=dev-python/sqlalchemy-migrate-0.7.2
 		>=dev-python/sqlalchemy-0.7.3
-		>=dev-python/routes-1.12.3
+		=dev-python/routes-1.12.3
         >=dev-python/lxml-2.3
-		>=dev-python/python-daemon-1.5.5
-        >=dev-python/wsgiref-0.1.2
-        >=dev-python/suds-0.4
+		<=dev-python/lxml-2.3.5
+		=dev-python/python-daemon-1.5.5
+        =dev-python/wsgiref-0.1.2
+        =dev-python/suds-0.4
         dev-python/paramiko
 		dev-python/paste
-		>=dev-python/pastedeploy-1.5.0
+		=dev-python/pastedeploy-1.5.0
 		>=dev-python/greenlet-0.3.1
-		>=dev-python/webob-1.0.8
+		=dev-python/webob-1.0.8
 		>=dev-python/Babel-0.9.6"
 RDEPEND="${DEPEND}
-         <dev-python/python-glanceclient-2
+   		 >=dev-python/python-glanceclient-0.5.0
+		 <dev-python/python-glanceclient-2
 		 >=dev-python/iso8601-0.1.4"
+
 
 S=${WORKDIR}/${P/_*/}
 
