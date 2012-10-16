@@ -20,7 +20,9 @@
 =dev-python/python-quantumclient-2.0 ~amd64
 =sys-cluster/nova-2012.2 ~amd64
 =dev-python/boto-2.1.1 ~amd64
-#dev-python/netaddr ~amd64
+=dev-python/netaddr-0.7.6 ~amd64
+
+
 #dev-python/pep8 ~amd64
 #dev-python/python-gflags ~amd64
 #=dev-python/python-novaclient-2012.1 ~amd64 
