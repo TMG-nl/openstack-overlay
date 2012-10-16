@@ -34,7 +34,7 @@ DEPEND="dev-python/setuptools
         =dev-python/suds-0.4
         dev-python/paramiko
 		dev-python/paste
-		=dev-python/pastedeploy-1.5.0
+		>=dev-python/pastedeploy-1.5.0
 		>=dev-python/greenlet-0.3.1
 		>=dev-python/webob-1.0.8
 		>=dev-python/Babel-0.9.6"
