@@ -13,7 +13,7 @@
 =dev-python/tempita-0.5.1 ~amd64
 =dev-python/anyjson-0.2.4 ~amd64
 =dev-python/greenlet-0.3.1-r1 ~amd64
-=dev-python/eventlet-0.9.16 ~amd64
+=dev-python/eventlet-0.9.17 ~amd64
 =dev-python/kombu-1.4.1 ~amd64
 =dev-python/prettytable-0.6.1 ~amd64
 =dev-python/cliff-1.2.1 ~amd64
