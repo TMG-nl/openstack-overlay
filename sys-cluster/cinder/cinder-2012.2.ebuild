@@ -29,7 +29,7 @@ DEPEND="dev-python/setuptools
 		=dev-python/routes-1.12.3
         >=dev-python/lxml-2.3
 		<=dev-python/lxml-2.3.5
-		=dev-python/python-daemon-1.5.5
+		>=dev-python/python-daemon-1.5.5
         =dev-python/wsgiref-0.1.2
         =dev-python/suds-0.4
         dev-python/paramiko
