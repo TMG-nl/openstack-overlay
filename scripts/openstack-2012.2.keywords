@@ -17,6 +17,8 @@
 =dev-python/kombu-1.4.1 ~amd64
 =dev-python/prettytable-0.6.1 ~amd64
 =dev-python/cliff-1.2.1 ~amd64
+=dev-python/python-quantumclient-2.0 ~amd64
+
 #dev-python/netaddr ~amd64
 #dev-python/pep8 ~amd64
 #dev-python/python-gflags ~amd64
