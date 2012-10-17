@@ -31,6 +31,7 @@
 =dev-python/django-compressor-1.1.2 ~amd64
 =dev-python/python-cinderclient-1.0 ~amd64
 =dev-python/python-novaclient-2.9.0 ~amd64
+=www-apps/horizon-2012.2 ~amd64 
 
 #dev-python/pep8 ~amd64
 #dev-python/python-gflags ~amd64
@@ -43,17 +44,13 @@ dev-python/carrot ~amd64
 #dev-python/nose ~amd64
 #dev-python/pip ~amd64
 #=dev-python/python-cloudfiles-1.7.10 ~amd64 
-#=dev-python/python-keystoneclient-2012.1 ~amd64 
 #dev-python/django-nose ~amd64
 #net-misc/quantum ~amd64
-#=sys-cluster/nova-2012.1.2 ~amd64 
-#=sys-cluster/swift-1.5.0 ~amd64 
 #=dev-python/python-swift3-1.5.0 ~amd64
 #sys-apps/seabios ~amd64
 #=sys-auth/keystone-2012.1.2 ~amd64
 #sys-auth/swift-keystone2 ~amd64
 #app-emulation/qemu-kvm ~amd64
-#=www-apps/horizon-2012.1.1-r1 ~amd64 
 #app-misc/scrub ~amd64
 #=www-apps/noVNC-9999 ~amd64
 #www-misc/websockify ~amd64
