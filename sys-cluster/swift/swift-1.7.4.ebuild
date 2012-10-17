@@ -35,10 +35,6 @@ RDEPEND="${DEPEND}
 # Can only use this when python.eclass is using EAPI4
 #REQUIRED_USE="|| ( storage-server proxy-server )"
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}-client-authv2.patch"
-}
-
 src_install()
 {
 	distutils_src_install
