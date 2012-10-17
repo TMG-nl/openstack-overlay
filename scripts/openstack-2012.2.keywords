@@ -32,7 +32,10 @@
 =dev-python/python-cinderclient-1.0 ~amd64
 =dev-python/python-novaclient-2.9.0 ~amd64
 =www-apps/horizon-2012.2 ~amd64 
+=www-apps/noVNC-9999 ~amd64
+www-misc/websockify ~amd64
 
+#
 #dev-python/pep8 ~amd64
 #dev-python/python-gflags ~amd64
 #dev-python/tempita ~amd64
@@ -52,6 +55,4 @@ dev-python/carrot ~amd64
 #sys-auth/swift-keystone2 ~amd64
 #app-emulation/qemu-kvm ~amd64
 #app-misc/scrub ~amd64
-#=www-apps/noVNC-9999 ~amd64
-#www-misc/websockify ~amd64
-#=net-dns/dnsmasq-2.61 ~amd64
+=net-dns/dnsmasq-2.61 ~amd64
