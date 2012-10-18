@@ -26,6 +26,6 @@ DEPEND="dev-python/setuptools
 		>=dev-python/python-cloudfiles-1.3.0
 		>=dev-python/pyftpdlib-0.6.0
 		>=dev-python/python-daemon-1.6
-		>=dev-python/python-memcache-1.45"
+		>=dev-python/python-memcached-1.45"
 RDEPEND="${DEPEND}"
 
