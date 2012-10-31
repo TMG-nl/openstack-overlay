@@ -29,7 +29,7 @@ DEPEND="dev-python/setuptools
 		dev-python/routes
 		>=dev-python/webob-1.0.8
 		dev-python/wsgiref
-		dev-python/argparse
+		virtual/python-argparse
 		=dev-python/boto-2.1.1
 		>=dev-python/sqlalchemy-migrate-0.7
 		dev-python/httplib2

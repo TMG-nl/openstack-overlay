@@ -11,3 +11,9 @@ Using this overlay through layman:
   to the 'overlay:' section.
 - Now run "layman -a openstack" to add the overlay
 
+OR alternativlely
+
+- For layman-2.0.0_rc* and later
+- Simply download the openstack-overlay.xml to /etc/layman/overlays/openstack-overlay.xml
+- run "layman -a openstack" to add the overlay
+
