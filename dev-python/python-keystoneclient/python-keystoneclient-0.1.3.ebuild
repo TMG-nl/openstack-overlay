@@ -24,7 +24,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-python/setuptools
-		dev-python/argparse
+		virtual/python-argparse
 		dev-python/httplib2
 		dev-python/prettytable
 		dev-python/simplejson

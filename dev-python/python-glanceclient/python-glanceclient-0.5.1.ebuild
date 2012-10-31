@@ -22,7 +22,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-python/setuptools
-		dev-python/argparse
+		virtual/python-argparse
 		>=dev-python/prettytable-0.6
 		<dev-python/prettytable-0.7
 		>=dev-python/python-keystoneclient-0.1.2

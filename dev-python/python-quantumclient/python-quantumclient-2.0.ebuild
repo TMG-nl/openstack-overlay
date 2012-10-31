@@ -19,7 +19,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=">=dev-python/cliff-0.6.0
-		dev-python/argparse
+		virtual/python-argparse
 		dev-python/httplib2
 		>=dev-python/prettytable-0.6.0
 		dev-python/simplejson
