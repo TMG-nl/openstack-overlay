@@ -22,7 +22,7 @@ IUSE=""
 
 DEPEND="dev-python/setuptools"
 RDEPEND="${DEPEND}
-		 dev-python/argparse
+		 virtual/python-argparse
 		 dev-python/httplib2
 		 dev-python/prettytable"
 

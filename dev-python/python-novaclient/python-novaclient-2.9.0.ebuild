@@ -23,7 +23,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-python/setuptools
-		dev-python/argparse
+		virtual/python-argparse
 		dev-python/httplib2
 		>=dev-python/iso8601-0.1.4
 		>=dev-python/prettytable-0.6
