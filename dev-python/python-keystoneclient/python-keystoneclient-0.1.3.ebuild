@@ -22,12 +22,11 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
-
+#blaat test
 DEPEND="dev-python/setuptools
 		virtual/python-argparse
 		dev-python/httplib2
 		dev-python/prettytable
-		dev-python/simplejson
-		!sys-auth/keystone"
+		dev-python/simplejson"
 RDEPEND="${DEPEND}"
 
