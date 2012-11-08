@@ -25,7 +25,7 @@ IUSE=""
 
 DEPEND="dev-python/setuptools
 		virtual/python-argparse
-		dev-python/httplib2
+		>=dev-python/httplib2-0.7.0
 		dev-python/prettytable
 		dev-python/simplejson"
 RDEPEND="${DEPEND}"

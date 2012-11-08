@@ -50,8 +50,8 @@ RDEPEND="${DEPEND}
 
 src_install() {
 	distutils_src_install
-	newconfd "${FILESDIR}/nova.confd" nova
-	newinitd "${FILESDIR}/nova.initd" nova
+	newconfd "${FILESDIR}/nova.confd-2012.2" nova
+	newinitd "${FILESDIR}/nova.initd-2012.2" nova
 
 	for function in api cert compute consoleauth network objectstore scheduler volume xvpvncproxy; do
 		dosym /etc/init.d/nova /etc/init.d/nova-${function}
