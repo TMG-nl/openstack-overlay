@@ -31,8 +31,8 @@ start() {
 
 	export TMPDIR=${NOVA_TMP_PATH}
 	start-stop-daemon --start --quiet --make-pidfile --pidfile "${PID_PATH}/${SVCNAME}.pid" \
-					  --exec /usr/bin/${SVCNAME} --background -- --config-file=${CONF_FILE}
-
+					  --exec /usr/bin/${SVCNAME} --background -- --config-file=${CONF_FILE} \
+					  --logfile=${LOG_PATH}/${SVCNAME}.log
 	eend $? "Failed to start ${SVCNAME}"
 }
 
