@@ -30,7 +30,8 @@ RDEPEND="${DEPEND}
 		<dev-python/webob-1.3
 		>=dev-python/pastedeploy-1.3.3
 		>=dev-python/simplejson-2.0.9
-		>=dev-python/pyxattr-0.4"
+		>=dev-python/pyxattr-0.4
+		>=dev-python/python-swiftclient-1.2.0"
 
 # Can only use this when python.eclass is using EAPI4
 #REQUIRED_USE="|| ( storage-server proxy-server )"
