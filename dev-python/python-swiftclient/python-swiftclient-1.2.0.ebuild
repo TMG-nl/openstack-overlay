@@ -21,6 +21,8 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-python/setuptools
-		dev-python/simplejson"
+		dev-python/simplejson
+        !<sys-cluster/swift-1.7.4"
+
 RDEPEND="${DEPEND}"
 
