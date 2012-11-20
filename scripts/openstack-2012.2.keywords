@@ -37,7 +37,7 @@
 =dev-python/python-cinderclient-1.0 ~amd64
 =dev-python/python-novaclient-2.9.0 ~amd64
 =www-apps/horizon-2012.2 ~amd64
-=www-apps/noVNC-9999 ~amd64
+=www-apps/noVNC-0.4 ~amd64
 =dev-python/python-swift3-1.5.0 ~amd64
 www-misc/websockify ~amd64
 
