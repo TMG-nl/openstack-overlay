@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Nova is a cloud computing fabric controller (the main part of an
 IaaS system). It is written in Python."
@@ -47,6 +47,11 @@ RDEPEND="${DEPEND}
          =dev-python/boto-2.1.1
 		 >=dev-python/iso8601-0.1.4
          controller? ( net-misc/rabbitmq-server )"
+
+src_prepare() {
+	distutils_src_prepare
+	epatch "${FILESDIR}/${P}-cloudpipe-pipelib.patch"
+}
 
 src_install() {
 	distutils_src_install
