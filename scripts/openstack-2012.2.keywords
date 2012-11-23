@@ -1,3 +1,4 @@
+=dev-python/sqlalchemy-0.7.9 ~amd64
 =dev-python/sqlalchemy-migrate-0.7.2 ~amd64
 =dev-python/python-glanceclient-0.5.1 ~amd64
 =sys-auth/keystone-2012.2 ~amd64
