@@ -48,6 +48,11 @@ RDEPEND="${DEPEND}
 		 >=dev-python/iso8601-0.1.4
          controller? ( net-misc/rabbitmq-server )"
 
+src_prepare() {
+	distutils_src_prepare
+	epatch "${FILESDIR}/${P}-092_add_instance_system_metadata.patch"
+}
+
 src_install() {
 	distutils_src_install
 	newconfd "${FILESDIR}/nova.confd-2012.2" nova
