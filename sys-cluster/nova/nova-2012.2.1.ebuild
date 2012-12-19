@@ -50,7 +50,7 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	distutils_src_prepare
-	epatch "${FILESDIR}/${P}-092_add_instance_system_metadata.patch"
+	epatch "${FILESDIR}/${PN}-2012.2-092_add_instance_system_metadata.patch"
 }
 
 src_install() {
