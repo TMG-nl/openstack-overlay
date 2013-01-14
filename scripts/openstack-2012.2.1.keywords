@@ -41,6 +41,7 @@
 =www-apps/noVNC-0.4 ~amd64
 =dev-python/python-swift3-1.5.0 ~amd64
 www-misc/websockify ~amd64
+=sys-block/tgt-1.0.19 ~amd64
 
 #
 #dev-python/pep8 ~amd64
