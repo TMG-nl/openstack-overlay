@@ -12,6 +12,6 @@
         <source type="git">https://github.com/hyves-org/openstack-overlay.git</source>
 	<!--<source type="git">git://github.com/hyves-org/openstack-overlay.git</source>-->
 
-	<feed>https://github.com/hyves-org/openstack-overlay/commits/master.atom</feed>
+	<feed>https://github.com/hyves-org/openstack-overlay/commits/eclass5.atom</feed>
 </repo>
 </repositories>
