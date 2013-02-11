@@ -2,12 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit git-2 distutils
+inherit git-2 distutils-r1
 
 DESCRIPTION="This is a client for the OpenStack Nova API. There's a Python API
 (the novaclient module), and a command-line script (nova). Each implements 100%

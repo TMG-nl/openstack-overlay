@@ -2,12 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 PYTHON_DEPEND=2
 SUPPORT_PYTHON_ABIS=1
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit git-2 distutils
+inherit git-2 distutils-r1
 
 DESCRIPTION="Openstack Swift S3 library for Python"
 HOMEPAGE="https://github.com/fujita/swift3"

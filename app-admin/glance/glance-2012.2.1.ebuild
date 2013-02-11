@@ -2,12 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 PYTHON_DEPENDS="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="Provides services for discovering, registering, and retrieving
 virtual machine images. Glance has a RESTful API that allows querying of VM

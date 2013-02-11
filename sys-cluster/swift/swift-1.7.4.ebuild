@@ -2,13 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
-
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils eutils
+inherit distutils-r1 eutils
 
 DESCRIPTION="Swift is a highly available, distributed, eventually consistent
 object/blob store"
@@ -22,7 +22,7 @@ IUSE="storage-server proxy-server"
 
 DEPEND="dev-python/setuptools"
 RDEPEND="${DEPEND}
-		=dev-python/netifaces-0.6
+		>=dev-python/netifaces-0.6
 		>=dev-python/configobj-4.7.1
 		>=dev-python/eventlet-0.9.15
 		>=dev-python/greenlet-0.3.1

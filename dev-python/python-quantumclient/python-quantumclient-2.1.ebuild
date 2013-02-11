@@ -2,11 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
 PYTHON_DEPEND="2"
 
-inherit git-2 distutils
+inherit git-2 distutils-r1
 
 DESCRIPTION="Python client library for OpenStack Virtual Network Service
 (Quantum)"
