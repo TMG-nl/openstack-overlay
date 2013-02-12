@@ -43,17 +43,16 @@ www-misc/websockify ~amd64
 =sys-block/tgt-1.0.19 ~amd64
 =dev-python/pep8-1.4.1 ~amd64
 =dev-python/django-nose-1.1 ~amd64
+=net-dns/dnsmasq-2.63 ~amd64
 
 dev-python/jsonschema ~amd64
 dev-python/jsonpointer ~amd64
 dev-python/jsonpatch ~amd64
+dev-python/carrot ~amd64
 
-
-#
 #dev-python/python-gflags ~amd64
 #dev-python/tempita ~amd64
 #dev-python/amqplib ~amd64
-dev-python/carrot ~amd64
 #dev-python/nosexcover ~amd64
 #dev-python/nova-adminclient ~amd64
 #dev-python/coverage ~amd64
@@ -62,6 +61,4 @@ dev-python/carrot ~amd64
 #net-misc/quantum ~amd64
 #sys-apps/seabios ~amd64
 #sys-auth/swift-keystone2 ~amd64
-#app-emulation/qemu-kvm ~amd64
 #app-misc/scrub ~amd64
-=net-dns/dnsmasq-2.63 ~amd64
