@@ -47,7 +47,7 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/${P/_*/}
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 	newconfd "${FILESDIR}/cinder.confd" cinder
 	newinitd "${FILESDIR}/cinder.initd" cinder
 

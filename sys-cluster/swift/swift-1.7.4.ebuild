@@ -38,7 +38,7 @@ RDEPEND="${DEPEND}
 
 src_install()
 {
-	distutils_src_install
+	distutils-r1_src_install
 
 	dodir "/var/run/swift"
 

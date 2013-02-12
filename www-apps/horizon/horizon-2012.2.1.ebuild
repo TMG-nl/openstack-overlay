@@ -37,7 +37,7 @@ DEPEND=">=dev-python/django-1.4
 RDEPEND="${DEPEND}"
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 	dodoc ${FILESDIR}"/horizon_vhost.conf"
 	dodir /etc/horizon
 	insinto /etc/horizon

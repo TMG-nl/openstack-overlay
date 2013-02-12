@@ -39,7 +39,7 @@ src_prepare() {
 }
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 
 	newconfd "${FILESDIR}/quantum-server.confd" quantum-server
 	newinitd "${FILESDIR}/quantum-server.initd" quantum-server

@@ -46,7 +46,7 @@ DEPEND="dev-python/setuptools
 RDEPEND="${DEPEND}"
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 	newconfd "${FILESDIR}/glance.confd" glance
 	newinitd "${FILESDIR}/glance.initd" glance
 

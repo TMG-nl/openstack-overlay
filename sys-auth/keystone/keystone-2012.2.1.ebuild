@@ -42,7 +42,7 @@ RDEPEND="${DEPEND}
 		 ldap? ( dev-python/python-ldap )"
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 	newconfd "${FILESDIR}/keystone.confd" keystone
 	newinitd "${FILESDIR}/keystone.initd" keystone
 
