@@ -49,13 +49,13 @@ RDEPEND="${DEPEND}
          controller? ( net-misc/rabbitmq-server )"
 
 src_prepare() {
-	distutils_src_prepare
+	distutils-r1_src_prepare
 	epatch "${FILESDIR}/${PN}-2012.2-092_add_instance_system_metadata.patch"
 	epatch "${FILESDIR}/${PN}-2012.2.2-r1-vif.py_libvirt_use_e1000_for_bridges.patch"
 }
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 	newconfd "${FILESDIR}/nova.confd-2012.2" nova
 	newinitd "${FILESDIR}/nova.initd-2012.2" nova
 
