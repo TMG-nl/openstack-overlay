@@ -18,6 +18,8 @@
 =dev-python/greenlet-0.3.1 ~amd64
 =dev-python/eventlet-0.12.1 ~amd64
 =dev-python/kombu-2.5.4 ~amd64
+=dev-python/py-amqp-1.0.6 ~amd64
+=dev-python/cmd2-0.6.4 ~amd64
 =dev-python/prettytable-0.6 ~amd64
 =dev-python/cliff-1.3 ~amd64
 =dev-python/python-quantumclient-2.1 ~amd64
