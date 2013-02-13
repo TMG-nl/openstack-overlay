@@ -20,7 +20,7 @@ KEYWORDS="~amd64"
 
 DEPEND="dev-python/setuptools
 		=dev-python/amqplib-0.6.1
-		=dev-python/anyjson-0.2.4
+		>=dev-python/anyjson-0.2.4
         >=dev-python/lockfile-0.8
         >=dev-python/kombu-1.0.4
         >=dev-python/eventlet-0.9.17

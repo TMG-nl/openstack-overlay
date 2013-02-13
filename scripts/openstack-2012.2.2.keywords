@@ -14,7 +14,7 @@
 =dev-python/iso8601-0.1.4 ~amd64
 =dev-python/wsgiref-0.1.2 ~amd64
 =dev-python/tempita-0.5.1 ~amd64
-=dev-python/anyjson-0.2.4 ~amd64
+>=dev-python/anyjson-0.2.4 ~amd64
 =dev-python/greenlet-0.3.1 ~amd64
 =dev-python/eventlet-0.12.1 ~amd64
 =dev-python/kombu-2.5.4 ~amd64
