@@ -23,7 +23,7 @@ IUSE=""
 DEPEND=">=dev-python/cliff-1.2.1
 		virtual/python-argparse
 		dev-python/httplib2
-		>=dev-python/prettytable-0.6.0
+		>=dev-python/prettytable-0.6
 		dev-python/simplejson
 		dev-python/pyparsing"
 RDEPEND="${DEPEND}"
