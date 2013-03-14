@@ -1,0 +1,13 @@
+diff -urN nova-2012.2.2.orig/nova/virt/firewall.py nova-2012.2.2/nova/virt/firewall.py
+--- nova-2012.2.2.orig/nova/virt/firewall.py	2013-03-14 13:32:35.073353412 +0100
++++ nova-2012.2.2/nova/virt/firewall.py	2013-03-14 13:33:32.977473657 +0100
+@@ -258,6 +258,9 @@
+         ipv4_rules += ['-j $provider']
+         ipv6_rules += ['-j $provider']
+ 
++        # Allow access to metadata server
++        ipv4_rules += ['-s 169.254.169.254/32 -p tcp -m tcp --sport 80 -j ACCEPT']
++
+     def _do_dhcp_rules(self, ipv4_rules, network_info):
+         # make sure this is legacy nw_info
+         network_info = self._handle_network_info_model(network_info)
