@@ -51,6 +51,10 @@ src_install() {
 	newconfd "${FILESDIR}/cinder.confd" cinder
 	newinitd "${FILESDIR}/cinder.initd" cinder
 
+	for function in all api scheduler volume; do
+		dosym /etc/init.d/cinder /etc/init.d/cinder-${function}
+	done
+
 	diropts -m 0750
 	dodir /var/run/cinder /var/log/cinder /var/lock/cinder
 }

@@ -7,31 +7,37 @@ depend() {
 	need net
 }
 
+BASENAME=$(echo $SVCNAME | cut -d '-' -f 1)
+
 checkconfig() {
-	if [ ! -r /etc/conf.d/$SVCNAME ]; then
-		eerror "No cinder flagfile found: /etc/conf.d/$SVCNAME)"
+	if [ ! -r /etc/conf.d/$BASENAME ]; then
+		eerror "No cinder configfile found: /etc/conf.d/$BASENAME)"
 		return 1
+	fi
+	if [ ${SVCNAME} == "cinder-api" ]; then
+		if [ ! -r /etc/cinder/api-paste.ini ]; then
+			eerror "No api-paste file found: /etc/cinder/api-paste.ini)"
+			return 1
+		fi
 	fi
 	return 0
 }
 
-
 start() {
 	checkconfig || return $?
-	. /etc/conf.d/$SVCNAME
+	. /etc/conf.d/$BASENAME
 	
 	ebegin "Starting ${SVCNAME}"
 
 	start-stop-daemon --start --quiet --make-pidfile --pidfile "${PID_PATH}/${SVCNAME}.pid" \
-					  --exec /usr/bin/${SVCNAME} --background -- --flagfile=${FLAG_FILE} \
+					  --exec /usr/bin/${SVCNAME} --background -- --config-file=${CONF_FILE} \
 					  --logfile=${LOG_PATH}/${SVCNAME}.log
-	
 	eend $? "Failed to start ${SVCNAME}"
 }
 
 stop() {
 	checkconfig || return $?
-	. /etc/conf.d/$SVCNAME
+	. /etc/conf.d/$BASENAME
 	
 	ebegin "Stopping ${SVCNAME}"
 	
