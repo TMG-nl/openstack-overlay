@@ -22,4 +22,4 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND="dev-python/setuptools"
-RDEPEND="${DEPEND}""
+RDEPEND="${DEPEND}"
