@@ -8,8 +8,9 @@ Using this overlay through layman:
 - "emerge layman"
 - Edit the layman configuration "vi /etc/layman/layman.cfg" and add 
   https://raw.github.com/hyves-org/openstack-overlay/master/openstack-overlay.xml
-  to the 'overlay:' section.
+  to the 'overlays:' section.
 - Now run "layman -a openstack" to add the overlay
+- if it's your first run of layman you have to create the cache first using 'layman -L'
 
 OR alternativlely
 
